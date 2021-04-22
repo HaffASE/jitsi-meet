@@ -226,11 +226,11 @@ class ReactInstanceManagerHolder {
                 .build();
 
         // Disable delta updates on Android, they have caused trouble.
-        DevInternalSettings devSettings
-            = (DevInternalSettings)reactInstanceManager.getDevSupportManager().getDevSettings();
-        if (devSettings != null) {
-            devSettings.setBundleDeltasEnabled(false);
-        }
+        // DevInternalSettings devSettings
+        //     = (DevInternalSettings)reactInstanceManager.getDevSupportManager().getDevSettings();
+        // if (devSettings != null) {
+        //     devSettings.setBundleDeltasEnabled(false);
+        // }
 
         // Register our uncaught exception handler.
         JitsiMeetUncaughtExceptionHandler.register();
