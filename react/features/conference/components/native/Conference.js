@@ -34,7 +34,6 @@ import {
 import type { AbstractProps } from '../AbstractConference';
 
 import ConferenceTimer from '../ConferenceTimer';
-import LonelyMeetingExperience from './LonelyMeetingExperience';
 import NavigationBar from './NavigationBar';
 import styles from './styles';
 
@@ -283,8 +282,6 @@ class Conference extends AbstractConference<Props, *> {
                         <DisplayNameLabel participantId = { _largeVideoParticipantId } />
                         <ConferenceTimer textStyle = { styles.roomTimer } />
                     </Container> }
-
-                    <LonelyMeetingExperience />
 
                     { _shouldDisplayTileView ? undefined : <Filmstrip /> }
                     <Toolbox />
