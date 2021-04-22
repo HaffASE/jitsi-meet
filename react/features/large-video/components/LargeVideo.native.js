@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import { Dimensions } from 'react-native';
 
 import { ColorSchemeRegistry } from '../../base/color-scheme';
 import { ParticipantView, getParticipantById } from '../../base/participants';
@@ -92,8 +93,18 @@ class LargeVideo extends PureComponent<Props, State> {
     static getDerivedStateFromProps(props: Props) {
         const { _height, _width } = props;
 
+        let height, width;
+
+        if (_height === 0 || _width === 0) {
+            width = Dimensions.get('window').width;
+            height = Dimensions.get('window').height;
+        } else {
+            height = _height;
+            width = _width;
+        }
+
         // Get the size, rounded to the nearest even number.
-        const size = 2 * Math.round(Math.min(_height, _width) / 2);
+        const size = 2 * Math.round(Math.min(height, width) / 2);
 
         if (size < AVATAR_SIZE * 1.5) {
             return {
