@@ -32,8 +32,7 @@ export default {
     filmstripNarrow: {
         flexDirection: 'row',
         flexGrow: 0,
-        justifyContent: 'flex-end',
-        marginBottom: 5
+        justifyContent: 'flex-end'
     },
 
     /**
@@ -84,13 +83,11 @@ export default {
         alignItems: 'stretch',
         backgroundColor: ColorPalette.appBackground,
         borderColor: '#424242',
-        borderRadius: 3,
         borderStyle: 'solid',
         borderWidth: 1,
         flex: 1,
         height: SMALL_THUMBNAIL_SIZE,
         justifyContent: 'center',
-        margin: 2,
         maxHeight: SMALL_THUMBNAIL_SIZE,
         maxWidth: SMALL_THUMBNAIL_SIZE,
         overflow: 'hidden',
