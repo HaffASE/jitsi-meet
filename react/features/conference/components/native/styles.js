@@ -81,8 +81,7 @@ export default {
     roomTimer: {
         color: ColorPalette.white,
         fontSize: 12,
-        fontWeight: '400',
-        paddingHorizontal: 8
+        fontWeight: '400'
     },
 
     roomTimerView: {

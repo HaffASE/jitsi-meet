@@ -33,6 +33,7 @@ import {
 } from '../AbstractConference';
 import type { AbstractProps } from '../AbstractConference';
 
+import ConferenceTimer from '../ConferenceTimer';
 import LonelyMeetingExperience from './LonelyMeetingExperience';
 import NavigationBar from './NavigationBar';
 import styles from './styles';
@@ -251,9 +252,10 @@ class Conference extends AbstractConference<Props, *> {
                 {/*
                   * The LargeVideo is the lowermost stacking layer.
                   */
-                    _shouldDisplayTileView
-                        ? <TileView onClick = { this._onClick } />
-                        : <LargeVideo onClick = { this._onClick } />
+                    // _shouldDisplayTileView
+                    //     ? <TileView onClick = { this._onClick } />
+                    //     : 
+                    <LargeVideo onClick = { this._onClick } />
                 }
 
                 {/*
@@ -280,6 +282,7 @@ class Conference extends AbstractConference<Props, *> {
 
                     { _shouldDisplayTileView || <Container style = { styles.displayNameContainer }>
                         <DisplayNameLabel participantId = { _largeVideoParticipantId } />
+                        <ConferenceTimer textStyle = { styles.roomTimer } />
                     </Container> }
 
                     <LonelyMeetingExperience />
