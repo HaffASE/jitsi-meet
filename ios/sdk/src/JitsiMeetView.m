@@ -160,6 +160,11 @@ static void initializeViewsMap() {
     [externalAPI sendSetVideoMuted:muted];
 }
 
+- (void)toggleCameraFacingMode {
+    ExternalAPI *externalAPI = [[JitsiMeet sharedInstance] getExternalAPI];
+    [externalAPI toggleCameraFacingMode];
+}
+
 #pragma mark Private methods
 
 /**

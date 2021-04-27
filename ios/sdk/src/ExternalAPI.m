@@ -27,7 +27,7 @@ static NSString * const openChatAction = @"org.jitsi.meet.OPEN_CHAT";
 static NSString * const closeChatAction = @"org.jitsi.meet.CLOSE_CHAT";
 static NSString * const sendChatMessageAction = @"org.jitsi.meet.SEND_CHAT_MESSAGE";
 static NSString * const setVideoMutedAction = @"org.jitsi.meet.SET_VIDEO_MUTED";
-static NSString * const toggleScreenShareAction = @"org.jitsi.meet.TOGGLE_CAMERA_FACING_MODE";
+static NSString * const toggleCameraFacingModeAction = @"org.jitsi.meet.TOGGLE_CAMERA_FACING_MODE";
 
 @implementation ExternalAPI
 
