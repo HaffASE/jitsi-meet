@@ -76,7 +76,8 @@ public class BroadcastAction {
         OPEN_CHAT("org.jitsi.meet.OPEN_CHAT"),
         CLOSE_CHAT("org.jitsi.meet.CLOSE_CHAT"),
         SEND_CHAT_MESSAGE("org.jitsi.meet.SEND_CHAT_MESSAGE"),
-        SET_VIDEO_MUTED("org.jitsi.meet.SET_VIDEO_MUTED");
+        SET_VIDEO_MUTED("org.jitsi.meet.SET_VIDEO_MUTED"),
+        TOGGLE_CAMERA_FACING_MODE("org.jitsi.meet.TOGGLE_CAMERA_FACING_MODE");
 
         private final String action;
 

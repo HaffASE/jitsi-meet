@@ -24,6 +24,10 @@ public class BroadcastIntentHelper {
         return new Intent(BroadcastAction.Type.TOGGLE_SCREEN_SHARE.getAction());
     }
 
+    public static Intent buildToggleCameraFacingModeIntent() {
+        return new Intent(BroadcastAction.Type.TOGGLE_CAMERA_FACING_MODE.getAction());
+    }
+
     public static Intent buildOpenChatIntent(String participantId) {
         Intent intent = new Intent(BroadcastAction.Type.OPEN_CHAT.getAction());
         intent.putExtra("to", participantId);

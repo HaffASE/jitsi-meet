@@ -26,7 +26,7 @@ import {
     getURLWithoutParams
 } from '../../base/connection';
 import { JitsiConferenceEvents } from '../../base/lib-jitsi-meet';
-import { MEDIA_TYPE } from '../../base/media';
+import { MEDIA_TYPE, toggleCameraFacingMode } from '../../base/media';
 import { SET_AUDIO_MUTED, SET_VIDEO_MUTED } from '../../base/media/actionTypes';
 import { PARTICIPANT_JOINED, PARTICIPANT_LEFT, getParticipants, getParticipantById } from '../../base/participants';
 import { MiddlewareRegistry, StateListenerRegistry } from '../../base/redux';
@@ -302,6 +302,10 @@ function _registerForNativeEvents(store) {
 
     eventEmitter.addListener(ExternalAPI.TOGGLE_SCREEN_SHARE, () => {
         dispatch(toggleScreensharing());
+    });
+
+    eventEmitter.addListener(ExternalAPI.TOGGLE_CAMERA_FACING_MODE, () => {
+        dispatch(toggleCameraFacingMode());
     });
 
     eventEmitter.addListener(ExternalAPI.RETRIEVE_PARTICIPANTS_INFO, ({ requestId }) => {

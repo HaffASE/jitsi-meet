@@ -86,6 +86,7 @@ class ExternalAPIModule
         constants.put("CLOSE_CHAT", BroadcastAction.Type.CLOSE_CHAT.getAction());
         constants.put("SEND_CHAT_MESSAGE", BroadcastAction.Type.SEND_CHAT_MESSAGE.getAction());
         constants.put("SET_VIDEO_MUTED", BroadcastAction.Type.SET_VIDEO_MUTED.getAction());
+        constants.put("TOGGLE_CAMERA_FACING_MODE", BroadcastAction.Type.TOGGLE_CAMERA_FACING_MODE.getAction());
 
         return constants;
     }
